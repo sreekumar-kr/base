@@ -17,6 +17,7 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
+	font-family:sans-serif;
 	background: transparent;
 	border: 0;
 	margin: 0;
