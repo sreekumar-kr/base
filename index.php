@@ -58,6 +58,7 @@ Google fonts are a great way to give your theme some custom typographic style. I
 			<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentyten' ); ?>"><?php _e( 'Skip to content', 'twentyten' ); ?></a></div>
 			<?php /* Our navigation menu. If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged to the primary position is the one used. If none is assigned, the menu with the lowest ID is used. */ ?>
 			<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
+			
 		</div><!-- #access -->
 		
 		<div id="content">		
@@ -81,6 +82,7 @@ Google fonts are a great way to give your theme some custom typographic style. I
 					<h2>Features</h2>
 					<ul>
 						<li>Custom Menu</li>
+					 
 					</ul>
 				</div>
 			</div>
@@ -99,8 +101,12 @@ Google fonts are a great way to give your theme some custom typographic style. I
                 Once again the bloginfo('name'); is used, and as illustrated can be used anywhere within your theme code
                 to generate the Site Name content which you set in Settings > General within the dashboard.
             -->
+            	<?php wp_nav_menu(
+					array(
+						'theme_location'	=> 'bottom_header_menu'	
+					));
+				?>
 		</div>
-	
 	</div>
 	
 </body>
