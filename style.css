@@ -30,13 +30,33 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	position: absolute;
 	left: -9000px;
 }
-
+.features{
+	margin:10px 0;
+}
+.features ul{
+	padding-left:35px;
+	list-style:square;
+}
+#container{
+	margin:auto;
+	width:960px;
+}
+#header{
+	margin-top:7px;
+}
+#header a{
+	color:#222;
+	text-decoration:none;
+}
+#header .description{
+	font-size:14px;
+}
 #access {
 	background: #000;
 	display: block;
 	float: left;
 	margin: 0 auto;
-	width: 940px;
+	width: 960px;
 }
 #access .menu-header,
 div.menu {

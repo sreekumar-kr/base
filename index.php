@@ -46,7 +46,7 @@ Google fonts are a great way to give your theme some custom typographic style. I
     
                 The home_url(); function above generates the site's homepage URL wherever you place it in your code
 			-->
-			<h2><?php bloginfo('description'); ?></h2>
+			<h2 class="description"><?php bloginfo('description'); ?></h2>
             <!-- BLOG DESCRIPTION
                 The bloginfo('description'); function fetches your Tagline the database which is editable in Settings > General
                 You'll see I've made use of this function in the <title> in the <head> of the HTML template as well.
@@ -64,7 +64,7 @@ Google fonts are a great way to give your theme some custom typographic style. I
 			<div id="sidebar" class="left"><!-- Left Sidebar Begins Here -->
 				<h4>Sidebar Header</h4>
 			</div>
-			
+			<br>
 			<div id="middle-column"><!-- Main Content Begins Here -->
 				<h3>Perfect for any blog and the starting point for theme development.</h3>
                 <p><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/base.jpg" width="960" height="200" alt="Training Wheels" /></p>
@@ -77,6 +77,12 @@ Google fonts are a great way to give your theme some custom typographic style. I
                   
                   Ensure that echo is added before the function in the php tag as the plain function does not generate the actual url but only fetches it
 				-->
+				<div class="features">
+					<h2>Features</h2>
+					<ul>
+						<li>Custom Menu</li>
+					</ul>
+				</div>
 			</div>
 			
 			<div id="sidebar" class="right"><!-- Right Sidebar Begins Here -->
@@ -86,7 +92,7 @@ Google fonts are a great way to give your theme some custom typographic style. I
 			<div style="clear:both;"></div>
 			
 		</div><!-- Content Ends Here -->
-		
+		<hr>
 		<div id="footer"><!-- Footer Content Begins Here -->
 			<p>&copy; <?php bloginfo('name'); ?></p>
             <!-- BLOG NAME & URL
