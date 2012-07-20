@@ -21,9 +21,9 @@ it's necessary because your themes stylesheet is now deeply nested within the wo
 
 Ensure that echo is added before the function in the php tag as the plain function does not generate the actual url but only fetches it
 -->
-
-<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <!-- GOOGLE FONTS
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
 The Link above enables the Dancing Script font from Google fonts so we can set whatever text we want to use that font.
 Google fonts are a great way to give your theme some custom typographic style. It just works!
 -->
@@ -53,15 +53,14 @@ Google fonts are a great way to give your theme some custom typographic style. I
             -->
 		</div>
 		
-		<div id="menu">
-        
-			<ul>
-				<?php wp_list_pages('title_li='); ?>
-			</ul>
-
-		</div>
-		<div id="content">
-			
+		<div id="access" role="navigation">
+		  <?php /* Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
+			<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentyten' ); ?>"><?php _e( 'Skip to content', 'twentyten' ); ?></a></div>
+			<?php /* Our navigation menu. If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged to the primary position is the one used. If none is assigned, the menu with the lowest ID is used. */ ?>
+			<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
+		</div><!-- #access -->
+		
+		<div id="content">		
 			<div id="sidebar" class="left"><!-- Left Sidebar Begins Here -->
 				<h4>Sidebar Header</h4>
 			</div>
