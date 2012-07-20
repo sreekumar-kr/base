@@ -56,10 +56,7 @@ Google fonts are a great way to give your theme some custom typographic style. I
 		<div id="menu">
         
 			<ul>
-            	<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-                <li><a href="#">More Info</a></li>
-                <li><a href="#">Contact</a></li>
+				<?php wp_list_pages('title_li='); ?>
 			</ul>
 
 		</div>
